@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>React SPA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Web-programozás-1 Előadás Házi feladat</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Kezdőlap</a>
+        <a href="tabla.html">Táblázat</a>
+        <a href="html5.html">HTML5</a>
+        <a href="chart.html">Chart.js</a>
+        <a href="ajax.html">AJAX</a>
+        <a href="oojs.html">OOJS</a>
+        <a href="react.html" class="active">React</a>
+    </nav>
+
+    <main>
+        <aside>
+            <p>React SPA – két mini alkalmazás</p>
+        </aside>
+        <div id="content">
+            <h2>Válassz egy alkalmazást</h2>
+            <button onclick="loadApp('app1/app.js')">Számláló</button>
+            <button onclick="loadApp('app2/app.js')">Kő-Papír-Olló</button>
+            <div id="root"></div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Készítette: TLUZ70 – Webprogramozás beadandó</p>
+    </footer>
+
+    
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    
+    <script>
+        function loadApp(src) {
+            const oldScript = document.getElementById("appScript");
+            if (oldScript) oldScript.remove();
+
+            const script = document.createElement("script");
+            script.src = "/react/" + src;
+            script.id = "appScript";
+            document.body.appendChild(script);
+        }
+    </script>
+</body>
+</html>

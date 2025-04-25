@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Server-Sent Events példa</title>
+</head>
+<body>
+    <h1>Server-Sent Events (SSE)</h1>
+    <p>Bejövő adatok:</p>
+    <div id="sseOutput"></div>
+
+    <script>
+        if (!!window.EventSource) {
+            const source = new EventSource("sse.php");
+            source.onmessage = function(event) {
+                const output = document.getElementById("sseOutput");
+                output.innerHTML += "<p>" + event.data + "</p>";
+            };
+        } else {
+            document.getElementById("sseOutput").innerText = "A böngésződ nem támogatja a SSE-t.";
+        }
+    </script>
+</body>
+</html>
