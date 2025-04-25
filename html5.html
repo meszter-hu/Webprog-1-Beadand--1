@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5 API példák</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Web-programozás-1 Előadás Házi feladat</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Kezdőlap</a>
+        <a href="tabla.html">Táblázat</a>
+        <a href="html5.html" class="active">HTML5</a>
+        <a href="chart.html">Chart.js</a>
+        <a href="ajax.html">AJAX</a>
+        <a href="oojs.html">OOJS</a>
+        <a href="react.html">React</a>
+    </nav>
+
+    <main>
+        <aside>
+            <p>HTML5 API példák: Web Storage, Web Workers, stb.</p>
+        </aside>
+        <div id="content">
+            <h2>HTML5 API példák</h2>
+
+            <section>
+                <h3>1. Web Storage</h3>
+                <input type="text" id="storageInput" placeholder="Írj be valamit...">
+                <button onclick="saveToStorage()">Mentés</button>
+                <p id="storageOutput"></p>
+            </section>
+
+            <section>
+                <h3>2. Web Worker</h3>
+                <button onclick="startWorker()">Számolás indítása</button>
+                <p id="workerOutput"></p>
+            </section>
+
+            <section>
+                <h3>3. Geolocation</h3>
+                <button onclick="getLocation()">Helyzet lekérése</button>
+                <p id="geoOutput"></p>
+            </section>
+
+            <section>
+                <h3>4. Drag and Drop</h3>
+                <div id="dragBox" draggable="true" style="width:100px;height:100px;background:red;"></div>
+                <div id="dropZone" style="width:150px;height:150px;background:#ccc;margin-top:10px;"></div>
+            </section>
+
+            <section>
+                <h3>5. Canvas</h3>
+                <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000;"></canvas>
+            </section>
+
+            <section>
+                <h3>6. SVG</h3>
+                <svg width="100" height="100">
+                    <circle cx="50" cy="50" r="40" fill="blue" />
+                </svg>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>Készítette: Mészáros Eszter - TLUZ70 </p>
+    </footer>
+
+    <script src="html5.js"></script>
+</body>
+</html>
