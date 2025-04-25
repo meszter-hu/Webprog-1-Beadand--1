@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Táblázat</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="tabla.css">
+</head>
+<body>
+    <header>
+        <h1>Web-programozás-1 Előadás Házi feladat</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Kezdőlap</a>
+        <a href="tabla.html" class="active">Táblázat</a>
+        <a href="html5.html">HTML5</a>
+        <a href="chart.html">Chart.js</a>
+        <a href="ajax.html">AJAX</a>
+        <a href="oojs.html">OOJS</a>
+        <a href="react.html">React</a>
+    </nav>
+
+    <main>
+        <aside>
+            <p>CRUD táblázat </p>
+        </aside>
+        <div id="content">
+            <h2>CRUD Táblázat</h2>
+
+            <form id="form">
+                <input type="text" id="name" placeholder="Név" required minlength="2" maxlength="30">
+                <input type="number" id="age" placeholder="Kor" required min="1" max="120">
+                <input type="text" id="city" placeholder="Város" required minlength="2" maxlength="30">
+                <input type="text" id="email" placeholder="Email" required>
+                <button type="submit">Hozzáadás</button>
+            </form>
+
+            <input type="text" id="search" placeholder="Keresés...">
+
+            <table id="dataTable">
+                <thead>
+                    <tr>
+                        <th data-col="name">Név</th>
+                        <th data-col="age">Kor</th>
+                        <th data-col="city">Város</th>
+                        <th data-col="email">Email</th>
+                        <th>Művelet</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <p>Készítette: Mészáros Eszter - TLUZ70 </p>
+    </footer>
+
+    <script src="tabla.js"></script>
+</body>
+</html>
